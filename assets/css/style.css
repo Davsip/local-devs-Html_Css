@@ -66,6 +66,14 @@ h6 {
   font-family: "Montserrat";
 }
 
+.main-text {
+  font-size: 70px;
+}
+
+main-text-2 {
+  font-size: 2px;
+}
+
 hr.star-light,
 hr.star-dark {
   max-width: 15rem;
