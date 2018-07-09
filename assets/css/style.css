@@ -34,36 +34,42 @@ h6 {
   margin: 10px;
   font-size: 23px;
   font-family: "Montserrat";
+  font-weight: bold;
 }
 
 .work-tab {
   margin: 10px;
   font-size: 23px;
   font-family: "Montserrat";
+  font-weight: bold;
 }
 
 .browse-tab {
   margin: 10px;
   font-size: 23px;
   font-family: "Montserrat";
+  font-weight: bold;
 }
 
 .social-tab {
   margin: 10px;
   font-size: 23px;
   font-family: "Montserrat";
+  font-weight: bold;
 }
 
 .icon-tab {
   margin: 20px;
-  font-size: 23px;
-  font-family: "Montserrat";
+  /* font-size: 23px;
+  font-family: "Montserrat"; */
 }
 
 .hire-tab {
   margin: 10px;
   font-size: 23px;
   font-family: "Montserrat";
+
+  font-weight: bold;
 }
 
 .main-text {
