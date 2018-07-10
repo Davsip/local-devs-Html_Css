@@ -184,6 +184,42 @@ a.portfolio-item {
   text-decoration: none;
 }
 
+img.team-img {
+  height: 120px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+div.img-container {
+  width: 50%;
+}
+
+p#description {
+  text-align: left;
+}
+
+div.modal-body {
+  text-align: center;
+}
+
+div#team-info div.row {
+  text-align: center;
+}
+
+/* Not sure if this is going to affect anything else!!!!!!!!!!! */
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Increase size of modal from 500 to 700px */
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 700px;
+  }
+}
+
+
 /* END BRYAN ADDED */
 
 @media (min-width: 576px) {
