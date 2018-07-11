@@ -46,7 +46,7 @@ $('#projectModal').on('shown.bs.modal', function (e) {
     // Remove data when closed (otherwise it will keep appending)
     $(document).on('hidden.bs.modal', (e) => {
         $('div#time').html('');
-        $('div#tech').html('<h5>Technologies:</h5>');
+        $('div#tech').html('<h5>Technologies</h5>');
         $('#team-display').html('');
     });
 
