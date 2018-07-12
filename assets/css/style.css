@@ -125,7 +125,6 @@ hr.star-dark:after {
   background-color: #fff;
 }
 
-
 .icons-work {
   padding-left: 70px;
 }
@@ -167,7 +166,7 @@ hr.star-dark:after {
 /* BRYAN ADDED */
 
 .h-100 {
-  height: 189px!important;
+  height: 189px !important;
 }
 
 section.portfolio div.container div.row {
@@ -223,7 +222,6 @@ div#team-info div.row {
     max-width: 700px;
   }
 }
-
 
 /* END BRYAN ADDED */
 
