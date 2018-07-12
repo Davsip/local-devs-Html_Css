@@ -5,13 +5,13 @@ $('#projectModal').on('shown.bs.modal', function (e) {
 
     // Grab reference to anchor tag clicked
     const reference = $(e.relatedTarget);
-    
+
     // pull data from a tag and #tech
     const title = reference.attr('data-title');
     const numDevs = parseInt(reference.attr('data-team'));
     const description = reference.attr('data-desc');
     const time = reference.attr('data-time');
-    let techArray = reference.find('span#techNeeded').html().replace(/,/g, '').toLowerCase().split(' ');
+    let techArray = reference.parent().find('p#techNeeded').html().replace(/,/g, '').toLowerCase().split(' ');
     const genderArray = ["female-icon.png", "male-icon.png"];
 
     // Project Overview
