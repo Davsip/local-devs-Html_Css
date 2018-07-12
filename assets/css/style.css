@@ -198,6 +198,12 @@ div#team-info div.row {
 }
 
 
+/* Dashboard Styles */
+section.dashboard {
+  margin-top: 150px;
+}
+
+
 /* END BRYAN ADDED */
 
 @media (min-width: 576px) {
