@@ -11,7 +11,7 @@ $('#projectModal').on('shown.bs.modal', function (e) {
     const numDevs = parseInt(reference.attr('data-team'));
     const description = reference.attr('data-desc');
     const time = reference.attr('data-time');
-    let techArray = reference.find('span#techNeeded').html().replace(/,/g, '').split(' ');
+    let techArray = reference.find('span#techNeeded').html().replace(/,/g, '').toLowerCase().split(' ');
     const genderArray = ["female-icon.png", "male-icon.png"];
 
     // Project Overview
@@ -25,7 +25,11 @@ $('#projectModal').on('shown.bs.modal', function (e) {
     
     // Technologies
     techArray.forEach(el => {
-        $('div#tech').append(`<p>${el}</p>`);
+        // symbols will not render image, so renaming (c#, c++)
+        if (el === "c#") el = el.replace("#", "sharp");
+        if (el === "c++") el = el.replace("++", "plusplus");
+        // append
+        $('div#tech').append(`<img src="./assets/images/tech/${el}.png" class="tech-icons" alt=${el} />`);
     });
     
     // Team
@@ -46,7 +50,7 @@ $('#projectModal').on('shown.bs.modal', function (e) {
     // Remove data when closed (otherwise it will keep appending)
     $(document).on('hidden.bs.modal', (e) => {
         $('div#time').html('');
-        $('div#tech').html('<h5>Technologies:</h5>');
+        $('div#tech').html('<h5>Technologies</h5>');
         $('#team-display').html('');
     });
 

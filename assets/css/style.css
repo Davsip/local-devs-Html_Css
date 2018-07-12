@@ -206,6 +206,11 @@ div#team-info div.row {
   text-align: center;
 }
 
+.tech-icons {
+  width: 50%;
+  padding: 10px;
+}
+
 /* Not sure if this is going to affect anything else!!!!!!!!!!! */
 .row {
   margin-left: 0;
