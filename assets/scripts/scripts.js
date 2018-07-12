@@ -14,6 +14,9 @@ $('#projectModal').on('shown.bs.modal', function (e) {
     let techArray = reference.parent().find('p#techNeeded').html().replace(/,/g, '').toLowerCase().split(' ');
     const genderArray = ["female-icon.png", "male-icon.png"];
 
+    // Load Apply Button Attributes (when user applies)
+    $('button#applyButton').attr('data-title', title). attr('data-desc', description).attr('data-tech', techArray);
+
     // Project Overview
     $('p#description').html(`<p>${description}</p>`);
     
@@ -52,8 +55,23 @@ $('#projectModal').on('shown.bs.modal', function (e) {
         $('div#time').html('');
         $('div#tech').html('<h5>Technologies</h5>');
         $('#team-display').html('');
+        $('#applyButton').removeAttr('title').removeAttr('desc').removeAttr('tech');
     });
 
     
 });
 
+// Apply Button Scripts
+$('button#applyButton').on('click', (evt) => {
+    evt.preventDefault();
+
+    // get button attrs for apply form
+    const title = $('button#applyButton').attr('data-title');
+    const description = $('button#applyButton').attr('data-desc');
+    const tech = $('button#applyButton').attr('data-tech');
+
+    window.location.href = './apply.html';
+
+
+    // console.log(evt);
+})
