@@ -81,7 +81,6 @@ main-text-2 {
   font-size: 2px;
 }
 
-
 hr.star-light,
 hr.star-dark {
   max-width: 15rem;
@@ -142,13 +141,11 @@ hr.star-dark:after {
   margin-bottom: -15px;
 }
 
-<<<<<<< HEAD
+/* { 
   height: 189px !important;
-}
-=======
-/* BRYAN ADDED */
->>>>>>> 43f0ead2fc890e7be85e6f6e93eeb9b9ad200565
+} */
 
+/* BRYAN ADDED */
 
 /* Fixed Card Height */
 div.card {
@@ -201,15 +198,11 @@ div#team-info div.row {
   }
 }
 
-<<<<<<< HEAD
-=======
-
 /* Dashboard Styles */
 section.dashboard {
   margin-top: 150px;
 }
 
->>>>>>> 43f0ead2fc890e7be85e6f6e93eeb9b9ad200565
 /* END BRYAN ADDED */
 
 @media (min-width: 576px) {
