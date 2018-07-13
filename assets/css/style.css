@@ -74,7 +74,7 @@ h6 {
 }
 
 .main-text {
-  font-size: 70px;
+  font-size: 50px;
 }
 
 main-text-2 {
@@ -111,7 +111,7 @@ hr.star-dark:after {
 }
 
 .section-1 {
-  padding: 11rem 0;
+  padding: 5rem 0;
   background-color: rgba(24, 188, 156, 0.9);
 }
 
