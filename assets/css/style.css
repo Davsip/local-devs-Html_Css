@@ -81,6 +81,7 @@ main-text-2 {
   font-size: 2px;
 }
 
+
 hr.star-light,
 hr.star-dark {
   max-width: 15rem;
@@ -141,7 +142,12 @@ hr.star-dark:after {
   margin-bottom: -15px;
 }
 
+
+  height: 189px !important;
+}
+=======
 /* BRYAN ADDED */
+
 
 
 /* Fixed Card Height */
@@ -200,6 +206,7 @@ div#team-info div.row {
 section.dashboard {
   margin-top: 150px;
 }
+
 
 /* END BRYAN ADDED */
 
