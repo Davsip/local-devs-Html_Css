@@ -111,7 +111,7 @@ hr.star-dark:after {
 }
 
 .section-1 {
-  padding: 6rem 0;
+  padding: 11rem 0;
   background-color: rgba(24, 188, 156, 0.9);
 }
 
@@ -401,4 +401,12 @@ section.dashboard {
   height: 8px;
   border-radius: 50%;
   background: white;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: #ff7f50 !important;
+  border: 1px solid #ff7f50 !important;
 }
