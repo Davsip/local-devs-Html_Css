@@ -403,6 +403,7 @@ section.dashboard {
   background: white;
 }
 
+<<<<<<< HEAD
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:active,
@@ -410,3 +411,10 @@ section.dashboard {
   background-color: #ff7f50 !important;
   border: 1px solid #ff7f50 !important;
 }
+=======
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #FF7F50 !important;
+  border: 1px solid #FF7F50 !important;
+}
+>>>>>>> 1c67a3584c42a86e7b821505eed2c443cc527234
