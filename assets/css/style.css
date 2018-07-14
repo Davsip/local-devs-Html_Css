@@ -407,9 +407,17 @@ section.dashboard {
   background: white;
 }
 
-a.nav-link {
-  color: #000;
+.nav-link {
+  color: #fff;
 }
+
+.nav-link:hover {
+  background-color: #128f76;
+  border: 0px solid #128f76;
+  color: #fff;
+
+}
+
 
 .btn-primary,
 .btn-primary:hover,
