@@ -1,5 +1,6 @@
 body {
   font-family: "Lato" "sans-serif";
+  color: #777;
 }
 
 .home {
@@ -407,6 +408,7 @@ section.dashboard {
   background: white;
 }
 
+/* LINK STYLES */
 .nav-link {
   color: #fff;
 }
@@ -418,6 +420,9 @@ section.dashboard {
 
 }
 
+a:focus, a:hover, a:active {
+  color: #128f76;
+}
 
 .btn-primary,
 .btn-primary:hover,
@@ -428,7 +433,4 @@ section.dashboard {
   border: 1px solid #ff7f50 !important;
 }
 
-body {
-  font-family: "Lato" "sans-serif";
-  color: #777;
-}
+
