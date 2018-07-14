@@ -52,9 +52,15 @@
             </div>
     </nav>
 
+    <!-- Incomplete Profile Warning -->
+    <div class="alert alert-warning profile-incomplete" role="alert">
+        This is a friendly reminder to complete your profile. <a href="./user_profile_form.html" class="alert-link">Click here to get started.</a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
 
-
-    <!-- Section 2 / how it works -->
+    <!-- Dashboard -->
     <section class="dashboard">
         <div class="container">
             <h2 class="text-center text-uppercase text-secondary ">My Dashboard</h2>
@@ -79,7 +85,7 @@
             </ul>
 
             <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="currProjs" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-pane fade" id="currProjs" role="tabpanel" aria-labelledby="home-tab">
 
                     <!-- Curr Projs Content -->
 
@@ -143,7 +149,7 @@
 
                 </div>
                 <!-- Available Projects -->
-                <div class="tab-pane fade" id="availProjs" role="tabpanel" aria-labelledby="contact-tab">
+                <div class="tab-pane fade show active" id="availProjs" role="tabpanel" aria-labelledby="contact-tab">
 
                     <!-- Avail Projs Content -->
 
