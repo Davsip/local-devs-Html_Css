@@ -70,8 +70,19 @@ $('button#applyButton').on('click', (evt) => {
     const description = $('button#applyButton').attr('data-desc');
     const tech = $('button#applyButton').attr('data-tech');
 
-    window.location.href = './apply.html';
+
+
+    if(!($('button#applyButton').attr('class', 'btn btn-primary disabled'))) {
+        window.location.href = './apply.html';
+    }
 
 
     // console.log(evt);
 })
+
+
+// ToolTip for Project Modal (Apply Btn)
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
