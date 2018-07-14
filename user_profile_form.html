@@ -17,11 +17,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link href="./assets/css/style.css" rel="stylesheet">
-     <!-- FONTS -->
-     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-         <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
 </head>
 
 <body id="page-top">
@@ -60,26 +62,33 @@
                         </a>
                     </li>
 
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <img src="./assets/images/icons/icon-login.png" class "nav-icon" alt="">
-                    </li>
-            </div>
-            </ul>
+                    <div class="dropdown icon-tab ">
+                        <button class="btn btn-secondary dropdown-togglen text-nav " type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user-alt"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Log in</a>
+                            <a class="dropdown-item" href="#">Sign up</a>
+                            <a class="dropdown-item" href="#">My dashboard</a>
+                        </div>
+                    </div>
+                </ul>
 
-        </div>
+            </div>
 
     </nav>
 
     </div>
 
 
- 
- 
 
 
-           
-<!-- USER SIGNUP SECTION -->
-        <section class="sign-up" id="contact">
+
+
+
+    <!-- USER SIGNUP SECTION -->
+    <section class="sign-up" id="contact">
         <div class="container">
             <h2 class="text-center text-uppercase text-secondary mb-0">Sign up</h2>
             <hr class="star-dark mb-5">
@@ -124,59 +133,60 @@
                             </div>
                         </div>
                         <div class="control-group">
-                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                             <label class="label">What are the main types of services you offer?</label>
-                                    <label class="checkbox-container">Web Development
-                                        <input type="checkbox" name="skill" value="web-dev">
-                                            <span class="checkmark"></span>
-                                          </label>
-                                          <label class="checkbox-container">Mobile Development
-                                            <input type="checkbox" name="skill" value="mobile-dev">
-                                            <span class="checkmark"></span>
-                                          </label>
-                                          <label class="checkbox-container">Software Development
-                                            <input type="checkbox" name="skill" value="software-dev">
-                                            <span class="checkmark"></span>
-                                          </label>
-                                          <label class="checkbox-container">Graphic Design
-                                            <input type="checkbox" name="skill" value="graphic design">
-                                            <span class="checkmark"></span>
-                                          </label>
-                                          <label class="checkbox-container">< other options... ></other>
-                                                <input type="checkbox" name="skill" value="graphic design">
-                                                <span class="checkmark"></span>
-                                              </label>
-                                              <p class="help-block text-danger"></p>
-                                              <label class="label">What is your level of experience?</label>
-                                              <label class="radio-container">Beginner
-                                                    <input type="radio" checked="checked" name="radio">
-                                                    <span class="radio-checkmark"></span>
-                                                  </label>
-                                                  <label class="radio-container">Intermediate
-                                                    <input type="radio" name="radio">
-                                                    <span class="radio-checkmark"></span>
-                                                  </label>
-                                                  <label class="radio-container">Expert
-                                                    <input type="radio" name="radio">
-                                                    <span class="radio-checkmark"></span>
-                                                  </label>
-                                                  <p class="help-block text-danger"></p>
-                                                  
-                                                <div class="control-group">
-                                                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                                            <label class="label">Employment background</label>
-                                                            <textarea class="form-control" rows="5" id="comment"></textarea>
-                                                            <p class="help-block text-danger"></p>
-                                                        </div>
-                                                    </div>
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                <label class="label">What are the main types of services you offer?</label>
+                                <label class="checkbox-container">Web Development
+                                    <input type="checkbox" name="skill" value="web-dev">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Mobile Development
+                                    <input type="checkbox" name="skill" value="mobile-dev">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Software Development
+                                    <input type="checkbox" name="skill" value="software-dev">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Graphic Design
+                                    <input type="checkbox" name="skill" value="graphic design">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">
+                                    < other options...></other>
+                                        <input type="checkbox" name="skill" value="graphic design">
+                                        <span class="checkmark"></span>
+                                </label>
+                                <p class="help-block text-danger"></p>
+                                <label class="label">What is your level of experience?</label>
+                                <label class="radio-container">Beginner
+                                    <input type="radio" checked="checked" name="radio">
+                                    <span class="radio-checkmark"></span>
+                                </label>
+                                <label class="radio-container">Intermediate
+                                    <input type="radio" name="radio">
+                                    <span class="radio-checkmark"></span>
+                                </label>
+                                <label class="radio-container">Expert
+                                    <input type="radio" name="radio">
+                                    <span class="radio-checkmark"></span>
+                                </label>
+                                <p class="help-block text-danger"></p>
 
-
-                                    
-
-                                    
-                                    <p class="help-block text-danger"></p>
+                                <div class="control-group">
+                                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                        <label class="label">Employment background</label>
+                                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                                        <p class="help-block text-danger"></p>
+                                    </div>
                                 </div>
+
+
+
+
+
+                                <p class="help-block text-danger"></p>
                             </div>
+                        </div>
                         <br />
                         <div id="success"></div>
                         <div class="form-group">
@@ -188,19 +198,19 @@
         </div>
     </section>
 
-                                     
-                    
-            
- 
 
-       <!--     <h2 class="text-center text-uppercase text-secondary mb-0">Sign up</h2>
+
+
+
+
+    <!--     <h2 class="text-center text-uppercase text-secondary mb-0">Sign up</h2>
             <hr class="star-dark mb-5">
             <div class="row">
                 <div class="col-lg-8 mx-auto"> 
                 -->
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                <!-- HIDING FORM 
+    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+    <!-- HIDING FORM 
                     <form name="sentMessage" id="contactForm" novalidate="novalidate">
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls mb-0 pb-2">
@@ -245,12 +255,12 @@
                     </form>
                 </div>
             </div> -->
-        </div>
+    </div>
     </section>
 
 
 
-                <!-- <img class="img-fluid mb-5 d-block mx-auto" src="./assets/images/main-image-test.png" alt="">
+    <!-- <img class="img-fluid mb-5 d-block mx-auto" src="./assets/images/main-image-test.png" alt="">
                 <h1 class="text-uppercase">Local Devs</h1>
                 <hr class="star-light">
                 <h2>Connecting Local Developers to Quality Projects</h2>
@@ -262,15 +272,15 @@
                     " required="required " data-validation-required-message="Please enter your name. ">
                     <p class="help-block text-danger "></p>
                 </div> -->
-    
-            
 
 
 
 
 
 
-    
+
+
+
 
 
     <!-- Section 2 / how it works -->
@@ -325,20 +335,23 @@
         </div>
 
     </section>
-               <!-- jQuery CDN - Slim version (=without AJAX) -->
-               <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-               <!-- Popper.JS -->
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-               <!-- Bootstrap JS -->
-               <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-           
-               <script type="text/javascript">
-                    $(document).ready(function() {
-                    $('[data-toggle=offcanvas]').click(function() {
-                        $('.row-offcanvas').toggleClass('active');
-                    });
-                    });
-               </script>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('[data-toggle=offcanvas]').click(function () {
+                $('.row-offcanvas').toggleClass('active');
+            });
+        });
+    </script>
 
 </body>
 

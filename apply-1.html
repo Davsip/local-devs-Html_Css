@@ -22,154 +22,163 @@
 
 <body id="page-top">
 
-<!-- Nav bar  -->
-<nav class=" navbar navbar-expand-lg fixed-top" id="mainNav">
-    <div class="hire-tab">
-        <a class="navbar-brand text-nav" href="#">Hire Locals</a>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="nav-tabs">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li>
-                    <div class="post-tab">
-                        <a class="nav-link text-nav" href="#">Post Projects</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="work-tab">
-                        <a class="nav-link text-nav" href="#">How it Works</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="browse-tab">
-                        <a class="nav-link text-nav" href="#">Browse Projects</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="social-tab">
-                        <a class="nav-link text-nav" href="#">Social</a>
-                </li>
-                <li>
-                    <div class="icon-tab">
-                        <img src="./assets/images/icons/icon-login.png" class "nav-icon" alt="">
-                    </div>
-                </li>
-            </ul>
+    <!-- Nav bar  -->
+    <nav class=" navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="hire-tab">
+            <a class="navbar-brand text-nav" href="#">Hire Locals</a>
         </div>
-    </div>
-</nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="nav-tabs">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li>
+                        <div class="post-tab">
+                            <a class="nav-link text-nav" href="#">Post Projects</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="work-tab">
+                            <a class="nav-link text-nav" href="#">How it Works</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="browse-tab">
+                            <a class="nav-link text-nav" href="#">Browse Projects</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="social-tab">
+                            <a class="nav-link text-nav" href="#">Social</a>
+                    </li>
+                    <li>
+                        <div class="dropdown icon-tab ">
+                            <button class="btn btn-secondary dropdown-togglen text-nav " type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-user-alt"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Log in</a>
+                                <a class="dropdown-item" href="#">Sign up</a>
+                                <a class="dropdown-item" href="#">My dashboard</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                </div>
+            </div>
+    </nav>
 
-<!-- APPLY FORM SECTION -->
-<section class="apply-form" id="contact">
-    <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Apply for a Project</h2>
-        <hr class="star-dark mb-5">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label class="label">Name</label>
-                            <input class="form-control" id="name" type="text" value="Name" onfocus="value=''" required="required" data-validation-required-message="Please enter your name.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label class="label">Email Address</label>
-                            <input class="form-control" id="email" type="email" value="Email Address" onfocus="value=''" required="required" data-validation-required-message="Please enter your email address.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label class="label">Phone Number</label>
-                            <input class="form-control" id="phone" type="tel" value="Phone Number" onfocus="value=''" required="required" data-validation-required-message="Please enter your phone number.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label class="label">Title of Project</label>
-                            <input class="form-control" id="email" type="email" value="Enter Title of Project" onfocus="value=''" required="required" data-validation-required-message="Please enter your email address.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label class="label">Description of Project</label>
-                            <textarea class="form-control" rows="5" id="comment"></textarea>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="control-group">
+    <!-- APPLY FORM SECTION -->
+    <section class="apply-form" id="contact">
+        <div class="container">
+            <h2 class="text-center text-uppercase text-secondary mb-0">Apply for a Project</h2>
+            <hr class="star-dark mb-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <div class="control-group">
                             <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                <label class="label">What are the main types of services you offer?</label>
-                                <label class="checkbox-container">C#
-                                        <input type="checkbox" name="skill" value="C#">
-                                        <span class="checkmark"></span>
-                                      </label>
-                                      <label class="checkbox-container">HTML 5
-                                        <input type="checkbox" name="skill" value="html-5">
-                                        <span class="checkmark"></span>
-                                      </label>
-                                      <label class="checkbox-container">JavaScript
-                                        <input type="checkbox" name="skill" value="javascript">
-                                        <span class="checkmark"></span>
-                                      </label>
-                                      <label class="checkbox-container">CSS
-                                        <input type="checkbox" name="skill" value="css">
-                                        <span class="checkmark"></span>
-                                      </label>
-                                      <label class="checkbox-container">JQuery
-                                            <input type="checkbox" name="skill" value="jquery">
-                                            <span class="checkmark"></span>
-                                      </label>
-                                      <label class="checkbox-container">AngularJS
-                                            <input type="checkbox" name="skill" value="angularjs">
-                                            <span class="checkmark"></span>
-                                      </label>
-                                          <p class="help-block text-danger"></p>
-                                          <label class="label">What is your level of experience?</label>
-                                          <label class="radio-container">Beginner
-                                                <input type="radio" checked="checked" name="radio">
-                                                <span class="radio-checkmark"></span>
-                                              </label>
-                                              <label class="radio-container">Intermediate
-                                                <input type="radio" name="radio">
-                                                <span class="radio-checkmark"></span>
-                                              </label>
-                                              <label class="radio-container">Expert
-                                                <input type="radio" name="radio">
-                                                <span class="radio-checkmark"></span>
-                                              </label>
-                                              <p class="help-block text-danger"></p>
-                                              
-                                       
-
-
-                                
-
-                                
+                                <label class="label">Name</label>
+                                <input class="form-control" id="name" type="text" value="Name" onfocus="value=''" required="required" data-validation-required-message="Please enter your name.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
-                    <br />
-                    <div id="success"></div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                <label class="label">Email Address</label>
+                                <input class="form-control" id="email" type="email" value="Email Address" onfocus="value=''" required="required" data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                <label class="label">Phone Number</label>
+                                <input class="form-control" id="phone" type="tel" value="Phone Number" onfocus="value=''" required="required" data-validation-required-message="Please enter your phone number.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                <label class="label">Title of Project</label>
+                                <input class="form-control" id="email" type="email" value="Enter Title of Project" onfocus="value=''" required="required"
+                                    data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                <label class="label">Description of Project</label>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                <label class="label">What are the main types of services you offer?</label>
+                                <label class="checkbox-container">C#
+                                    <input type="checkbox" name="skill" value="C#">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">HTML 5
+                                    <input type="checkbox" name="skill" value="html-5">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">JavaScript
+                                    <input type="checkbox" name="skill" value="javascript">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">CSS
+                                    <input type="checkbox" name="skill" value="css">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">JQuery
+                                    <input type="checkbox" name="skill" value="jquery">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">AngularJS
+                                    <input type="checkbox" name="skill" value="angularjs">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <p class="help-block text-danger"></p>
+                                <label class="label">What is your level of experience?</label>
+                                <label class="radio-container">Beginner
+                                    <input type="radio" checked="checked" name="radio">
+                                    <span class="radio-checkmark"></span>
+                                </label>
+                                <label class="radio-container">Intermediate
+                                    <input type="radio" name="radio">
+                                    <span class="radio-checkmark"></span>
+                                </label>
+                                <label class="radio-container">Expert
+                                    <input type="radio" name="radio">
+                                    <span class="radio-checkmark"></span>
+                                </label>
+                                <p class="help-block text-danger"></p>
 
-                       <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Submit</button>
-                    
-                    </div>
+
+
+
+
+
+
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br />
+                        <div id="success"></div>
+
+                        <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Submit</button>
+
+                </div>
                 </form>
             </div>
         </div>
-    </div>
-</section>
+        </div>
+    </section>
 
 
 
@@ -191,9 +200,12 @@
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
     <!-- Email Script -->
 
