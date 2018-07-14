@@ -204,6 +204,15 @@ ul.nav-pills {
   margin-bottom: 50px;
 }
 
+a.nav-dashboard:hover {
+  background-color: white;
+  color: #777;
+}
+
+a.nav-dashboard {
+  color: #777;
+}
+
 /* Increase size of modal from 500 to 700px */
 @media (min-width: 576px) {
   .modal-dialog {
