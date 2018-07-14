@@ -70,17 +70,26 @@ h6 {
   margin: 10px;
   font-size: 23px;
   font-family: "Montserrat";
-
   font-weight: bold;
 }
 
 .main-text {
-  font-size: 50px;
+  font-size: 6rem;
+  padding: 0 0 30px 0;
 }
 
-main-text-2 {
-  font-size: 2px;
+.img-logo  {
+  padding-top: 60px;
 }
+
+.pinlogo {
+  padding-bottom: 50px;
+}
+
+.main-text-2 {
+  font-size: 1.7rem;
+}
+
 
 hr.star-light,
 hr.star-dark {
