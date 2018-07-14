@@ -152,7 +152,7 @@ div.card {
   margin: 10px auto;
 }
 
-a.btn {
+a.btn, div.btn {
   position: absolute;
   bottom: 20px;
 }
@@ -188,6 +188,10 @@ div#team-info div.row {
 .row {
   margin-left: 0;
   margin-right: 0;
+}
+
+ul.nav-pills {
+  margin-bottom: 50px;
 }
 
 /* Increase size of modal from 500 to 700px */
@@ -403,10 +407,15 @@ section.dashboard {
   background: white;
 }
 
+a.nav-link {
+  color: #000;
+}
+
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:active,
-.btn-primary:visited {
+.btn-primary:visited,
+.nav-link.active {
   background-color: #ff7f50 !important;
   border: 1px solid #ff7f50 !important;
 }

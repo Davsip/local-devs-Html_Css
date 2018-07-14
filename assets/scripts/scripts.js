@@ -24,7 +24,7 @@ $('#projectModal').on('shown.bs.modal', function (e) {
     $('#projectTitle').html(title);
     
     // Project Time
-    $('div#time').append(`<img src="./assets/images/calendars/${time}.png" />`);
+    $('div#time').append(`<img src="./assets/images/icons/${time}.png" />`);
     
     // Technologies
     techArray.forEach(el => {
