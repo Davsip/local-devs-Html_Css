@@ -197,6 +197,9 @@ div#team-info div.row {
 button#submit-new-project {
   margin: 50px auto 100px auto;
 }
+button#update-project {
+  margin: 30px auto auto auto;
+}
 
 /* Not sure if this is going to affect anything else!!!!!!!!!!! */
 .row {
