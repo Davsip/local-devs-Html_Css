@@ -194,6 +194,10 @@ div#team-info div.row {
   padding: 10px;
 }
 
+button#submit-new-project {
+  margin: 50px auto 100px auto;
+}
+
 /* Not sure if this is going to affect anything else!!!!!!!!!!! */
 .row {
   margin-left: 0;
