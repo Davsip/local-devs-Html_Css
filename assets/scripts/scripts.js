@@ -85,4 +85,6 @@ $('button#applyButton').on('click', (evt) => {
 
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
-  })
+});
+
+

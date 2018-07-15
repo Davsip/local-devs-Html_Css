@@ -218,6 +218,34 @@ div.profile-incomplete {
   margin-bottom: -70px;
 }
 
+/* Admin Dashboard Card */
+
+/* Unset Height */
+div.card-proj {
+  height: auto;
+}
+
+button.btn-link {
+  color: #777;
+}
+
+h6.projDetails {
+  margin: 40px auto 20px auto;
+
+}
+
+button.btn-link:focus {
+  text-decoration: none;
+}
+
+button.btn-link:hover {
+  text-decoration: none;
+}
+
+button.btn-sm {
+  margin: 5px auto;
+}
+
 /* Increase size of modal from 500 to 700px */
 @media (min-width: 576px) {
   .modal-dialog {
@@ -451,7 +479,8 @@ a:focus, a:hover, a:active {
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:visited,
-.nav-link.active {
+.nav-link.active,
+button.btn-secondary {
   background-color: #ff7f50 !important;
   border: 1px solid #ff7f50 !important;
 }
