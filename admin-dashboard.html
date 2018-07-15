@@ -103,6 +103,37 @@
                             <label for="FormControlInput1">Location Zip Code</label>
                             <input type="text" class="form-control" id="location" />
                         </div>
+                        <div class="form-group">
+                            <label for="FormControlInput1">Start Date (mm/dd/yyyy)</label>
+                            <input type="text" class="form-control" id="start-date" />
+                        </div>
+                        <div class="form-group">
+                            <label for="FormControlInput1">Team Size</label>
+                            <input type="text" class="form-control" id="team-size" />
+                        </div>
+                        <div class="form-group">
+                            <label>Duration</label>
+                            <select class="form-control" id="duration">
+                                <option selected>Choose Duration...</option>
+                                <option value="3mo">3 Months</option>
+                                <option value="5mo">5 Months</option>
+                                <option value="7mo">7 Months</option>
+                                <option value="8mo">8 Months</option>
+                                <option value="11mo">11 Months</option>
+                                <option value="18mo">18 Months</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>SE Led</label><br />
+                            <div class="form-check form-check-inline seled">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="seledTrue" value="true">
+                                <label class="form-check-label" for="inlineRadio1">True</label>
+                            </div>
+                            <div class="form-check form-check-inline seled">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="seledFalse" value="false">
+                                <label class="form-check-label" for="inlineRadio2">False</label>
+                            </div>
+                        </div>
                         <!-- Technologies Checkboxes -->
                         <div class="form-group">
                             <label for="FormControlInput1">Technologies</label><br />
@@ -193,33 +224,6 @@
                             </div>
                         </div>
                         <!-- End Technologies Checkboxes -->
-                        <div class="form-group">
-                            <label for="FormControlInput1">Start Date (mm/dd/yyyy)</label>
-                            <input type="text" class="form-control" id="start-date" />
-                        </div>
-                        <div class="form-group">
-                            <label>Duration</label>
-                            <select class="form-control" id="duration">
-                                <option selected>Choose Duration...</option>
-                                <option value="3mo">3 Months</option>
-                                <option value="5mo">5 Months</option>
-                                <option value="7mo">7 Months</option>
-                                <option value="8mo">8 Months</option>
-                                <option value="11mo">11 Months</option>
-                                <option value="18mo">18 Months</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>SE Led</label><br />
-                            <div class="form-check form-check-inline seled">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="seledTrue" value="true">
-                                <label class="form-check-label" for="inlineRadio1">True</label>
-                            </div>
-                            <div class="form-check form-check-inline seled">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="seledFalse" value="false">
-                                <label class="form-check-label" for="inlineRadio2">False</label>
-                            </div>
-                        </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Project Description</label>
                             <textarea class="form-control description" id="description" rows="5"></textarea>
