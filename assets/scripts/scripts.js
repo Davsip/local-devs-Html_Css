@@ -88,3 +88,34 @@ $(function () {
 });
 
 
+// Clone applicant to team
+$('.applicant-move').on('click', (e) => {
+    e.preventDefault();
+
+    // Set target
+    const el = e.currentTarget.parentNode.parentNode;
+
+    // Clone target
+    let cln = el.cloneNode(true);
+
+    // Change dropdown class
+    cln.childNodes[3].childNodes[1].setAttribute('class', 'dropdown-item member-remove')
+
+    // Change dropdown option text
+    cln.childNodes[3].childNodes[1].innerHTML = 'Remove From Team';
+
+    // Change class to remove 'show'
+    cln.childNodes[3].setAttribute('class', 'dropdown-menu');
+
+    // copy to team
+    $('div#team-members').append(cln);
+});
+
+// Remove member from team
+$(document).on('click', 'a.member-remove', (evt) => {
+    evt.preventDefault();
+    
+    // remove element
+    evt.currentTarget.parentNode.parentNode.remove();
+
+});
