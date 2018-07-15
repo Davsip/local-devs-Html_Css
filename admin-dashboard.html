@@ -56,12 +56,12 @@
 
                     </li>
                 </ul>
-                </div>
             </div>
+        </div>
     </nav>
 
 
-    <!-- Admin Dashboard -->
+    <!-- Admin Dashboard Nav Pills, Form, Accordian View-->
     <section class="dashboard">
         <div class="container">
             <h2 class="text-center text-uppercase text-secondary ">Admin Dashboard</h2>
@@ -86,28 +86,23 @@
             <div class="tab-content" id="pills-tabContent">
                 
                 
-<!-- ******************* POST A PROJECT *********************************** -->
+<!-- ***************** BEGIN POST A PROJECT FORM *************************** -->
 
                 <div class="tab-pane fade active show" id="postProj" role="tabpanel" aria-labelledby="home-tab">
 
-
                     <form>
-
                         <div class="form-group">
                             <label for="FormControlInput1">Project Title</label>
                             <input type="text" class="form-control" id="title" />
                         </div>
-
                         <div class="form-group">
                             <label for="FormControlInput1">Budget</label>
                             <input type="currency" class="form-control" id="budget" />
                         </div>
-
                         <div class="form-group">
                             <label for="FormControlInput1">Location Zip Code</label>
                             <input type="text" class="form-control" id="location" />
                         </div>
-
                         <!-- Technologies Checkboxes -->
                         <div class="form-group">
                             <label for="FormControlInput1">Technologies</label><br />
@@ -198,12 +193,10 @@
                             </div>
                         </div>
                         <!-- End Technologies Checkboxes -->
-
                         <div class="form-group">
                             <label for="FormControlInput1">Start Date (mm/dd/yyyy)</label>
                             <input type="text" class="form-control" id="start-date" />
                         </div>
-
                         <div class="form-group">
                             <label>Duration</label>
                             <select class="form-control" id="duration">
@@ -216,7 +209,6 @@
                                 <option value="18mo">18 Months</option>
                             </select>
                         </div>
-
                         <div class="form-group">
                             <label>SE Led</label><br />
                             <div class="form-check form-check-inline seled">
@@ -228,28 +220,24 @@
                                 <label class="form-check-label" for="inlineRadio2">False</label>
                             </div>
                         </div>
-                        
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Project Description</label>
                             <textarea class="form-control description" id="description" rows="5"></textarea>
                         </div>
-
                         <button type="button" class="btn btn-primary btn-lg" id="submit-new-project">Submit Project</button>
-
                     </form>
                 </div>
 
-
-<!-- ******************* END POST PROJECT ******************************** -->
+<!-- ******************* END POST PROJECT FORM *************************** -->
 <!-- ******************* BEGIN PENDING PROJECTS ************************** -->
 
                 <div class="tab-pane fade" id="pendingProjs" role="tabpanel" aria-labelledby="profile-tab">
 
-                    <!-- Pending Projs Content -->
+                    <!-- All Pending Projs Content in Accordian -->
                     
                     <div id="accordion">
 
-                        <!-- Accordian - Proj 1 -->
+                        <!-- Proj 1 -->
 
                         <div class="card card-proj">
                             <div class="card-header" id="headingOne">
@@ -282,7 +270,6 @@
 
                                                 <em>SE Led</em>: <span class="seLed">false</span>
                                             </p>
-
                                             
                                         </div>
                                         <div class="col-sm-6">
@@ -399,13 +386,8 @@
                                             </span>
                                             <!-- End Applicant 1 -->
 
-
                                         </div>
-
-
-
                                     </div>
-
                                 </div>
 
 
@@ -455,7 +437,6 @@
                 
 <!-- ******************* END PENDING PROJECTS ************************** -->
 <!-- ******************* BEGIN STARTED PROJECTS ************************ -->
-
 
                 <div class="tab-pane fade" id="startedProjs" role="tabpanel" aria-labelledby="contact-tab">
 
@@ -622,7 +603,6 @@
 
                                 </div>
 
-
                             <!-- End Started Proj 1 Details -->
                             </div>
                         </div>
@@ -644,7 +624,6 @@
     
                             <!-- End Proj 2 -->
 
-
                     </div>
                     
                 </div>
@@ -652,9 +631,7 @@
 <!-- ******************* END STARTED PROJECTS ************************ -->
 <!-- ******************* BEGIN COMPLETED PROJECTS ******************** -->
 
-
                 <div class="tab-pane fade" id="completedProjs" role="tabpanel" aria-labelledby="contact-tab">
-
 
                     <!-- Completed Projs Content -->
 
@@ -694,7 +671,6 @@
                                                 <em>SE Led</em>: <span class="seLed">false</span>
                                             </p>
 
-                                            
                                         </div>
                                         <div class="col-sm-6">
                                             <!-- Desc -->
@@ -810,15 +786,9 @@
                                             </span>
                                             <!-- End Applicant 1 -->
 
-
                                         </div>
-
-
-
                                     </div>
-
                                 </div>
-
 
                             <!-- End Compl Proj 1 Details -->
                             </div>
@@ -841,31 +811,19 @@
     
                             <!-- End Proj 2 -->
 
-
                     </div>
-
-                    <!-- End Completed Projs -->
-
-
-
                 </div>
 
 <!-- ******************* END COMPLETED PROJECTS ******************** -->
-
 
             </div>
 
 <!--    ***** END ALL PILLS CONTENT (inludes all content in tabs)****    -->
 
-
-
-
         </div>
         <!-- End page container (above) -->
 
     </section>
-
-
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
