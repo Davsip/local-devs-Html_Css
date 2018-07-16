@@ -119,3 +119,25 @@ $(document).on('click', 'a.member-remove', (evt) => {
     evt.currentTarget.parentNode.parentNode.remove();
 
 });
+
+$(document).on('click', 'a.pstage', (evt) => {
+
+    evt.preventDefault();
+
+    // get clicked link value
+    const newVal = evt.currentTarget.id;
+
+    // get current status value
+    const currVal = evt.currentTarget.parentNode.parentNode.childNodes[1].innerHTML;
+
+    // change clicked link value and id to currVal
+    evt.currentTarget.id = currVal;
+    evt.currentTarget.innerHTML = currVal;
+
+    // change curr status to newVal (status)
+    evt.currentTarget.parentNode.parentNode.childNodes[1].innerHTML = newVal;
+
+
+
+
+});
