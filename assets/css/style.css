@@ -1,5 +1,6 @@
 body {
   font-family: "Lato" "sans-serif";
+  color: #777;
 }
 
 .home {
@@ -69,19 +70,27 @@ h6 {
   margin: 10px;
   font-size: 23px;
   font-family: "Montserrat";
-
   font-weight: bold;
 }
 
 .main-text {
-  font-size: 70px;
+  font-size: 6rem;
+  padding: 0 0 30px 0;
 }
 
-main-text-2 {
-  font-size: 2px;
+.img-logo {
+  padding-top: 60px;
 }
 
-hr.star-light,
+.pinlogo {
+  padding-bottom: 50px;
+}
+
+<<<<<<< head ======= .main-text-2 {
+  font-size: 1.7rem;
+}
+
+>>>>>>>13285466f4af7e3a10d146a45853d43a013dc497 hr.star-light,
 hr.star-dark {
   max-width: 15rem;
   padding: 0;
@@ -111,7 +120,7 @@ hr.star-dark:after {
 }
 
 .section-1 {
-  padding: 6rem 0;
+  padding: 5rem 0;
   background-color: rgba(24, 188, 156, 0.9);
 }
 
@@ -141,8 +150,12 @@ hr.star-dark:after {
   margin-bottom: -15px;
 }
 
+<<<<<<< HEAD
 /* { 
   height: 189px !important;
+=======
+/* height: 189px !important;
+>>>>>>> 13285466f4af7e3a10d146a45853d43a013dc497
 } */
 
 /* BRYAN ADDED */
@@ -153,7 +166,8 @@ div.card {
   margin: 10px auto;
 }
 
-a.btn {
+a.btn,
+div.btn {
   position: absolute;
   bottom: 20px;
 }
@@ -185,16 +199,68 @@ div#team-info div.row {
   padding: 10px;
 }
 
+button#submit-new-project {
+  margin: 50px auto 100px auto;
+}
+button#update-project {
+  margin: 30px auto auto auto;
+}
+
 /* Not sure if this is going to affect anything else!!!!!!!!!!! */
 .row {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+ul.nav-pills {
+  margin-bottom: 50px;
+}
+
+a.nav-dashboard:hover {
+  background-color: white;
+  color: #777;
+}
+
+a.nav-dashboard {
+  color: #777;
+}
+
+div.profile-incomplete {
+  margin-top: 100px;
+  margin-bottom: -70px;
+}
+
+/* Admin Dashboard Card */
+
+/* Unset Height */
+div.card-proj {
+  height: auto;
+}
+
+button.btn-link {
+  color: #777;
+}
+
+h6.projDetails {
+  margin: 40px auto 20px auto;
+}
+
+button.btn-link:focus {
+  text-decoration: none;
+}
+
+button.btn-link:hover {
+  text-decoration: none;
+}
+
+button.btn-sm {
+  margin: 5px auto;
 }
 
 /* Increase size of modal from 500 to 700px */
 @media (min-width: 576px) {
   .modal-dialog {
-    max-width: 700px;
+    max-width: 700px !important;
   }
 }
 
@@ -402,4 +468,36 @@ section.dashboard {
   height: 8px;
   border-radius: 50%;
   background: white;
+}
+
+/* LINK STYLES */
+.nav-link {
+  color: #fff;
+}
+
+.nav-link:hover {
+  background-color: #128f76;
+  border: 0px solid #128f76;
+  color: #fff;
+}
+
+a:focus,
+a:hover,
+a:active {
+  color: #128f76;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.nav-link.active,
+button.btn-secondary {
+  background-color: #ff7f50 !important;
+  border: 1px solid #ff7f50 !important;
+}
+
+.profile-section {
+  background-color: #ccc;
+  padding: 1.25rem;
 }

@@ -1,0 +1,852 @@
+<!-- *********************** NOTE ******************************************
+    EACH ACCORDIAN BUTTON HAS A DATA-TARGET and EACH DIV HAS AN ID (without #). NAMING CONVENTIONS AS FOLLOWS
+    #pendingCollapseOne -> Two -> Three -> etc
+    #startedCollapseOne
+    #completedCollapseOne 
+******************************************************************-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="./assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Nav bar  -->
+    <nav class=" navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="hire-tab">
+            <a class="navbar-brand text-nav" href="#">Hire Locals</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="nav-tabs">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li>
+                        <div class="dropdown icon-tab ">
+                            <button class="btn btn-secondary dropdown-togglen text-nav " type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-user-alt"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Log in</a>
+                                <a class="dropdown-item" href="#">Sign up</a>
+                                <a class="dropdown-item" href="#">My Dashboard</a>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Admin Dashboard Nav Pills, Form, Accordian View-->
+    <section class="dashboard">
+        <div class="container">
+            <h2 class="text-center text-uppercase text-secondary ">Admin Dashboard</h2>
+            <hr class="star-dark mb-6 ">
+
+            <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link nav-dashboard active" data-toggle="pill" href="#postProj">Post Project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-dashboard" data-toggle="pill" href="#pendingProjs">Pending Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-dashboard" data-toggle="pill" href="#startedProjs">Started Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-dashboard" data-toggle="pill" href="#completedProjs">Completed Projects</a>
+                </li>
+            </ul>
+
+<!--    ***** BEGIN ALL PILLS CONTENT (inludes all content in tabs)****    -->
+            <div class="tab-content" id="pills-tabContent">
+                
+                
+<!-- ***************** BEGIN POST A PROJECT FORM *************************** -->
+
+                <div class="tab-pane fade active show" id="postProj" role="tabpanel" aria-labelledby="home-tab">
+
+                    <form>
+                        <div class="form-group">
+                            <label for="FormControlInput1">Project Title</label>
+                            <input type="text" class="form-control" id="title" />
+                        </div>
+                        <div class="form-group">
+                            <label for="FormControlInput1">Budget</label>
+                            <input type="currency" class="form-control" id="budget" />
+                        </div>
+                        <div class="form-group">
+                            <label for="FormControlInput1">Location Zip Code</label>
+                            <input type="text" class="form-control" id="location" />
+                        </div>
+                        <div class="form-group">
+                            <label for="FormControlInput1">Start Date (mm/dd/yyyy)</label>
+                            <input type="text" class="form-control" id="start-date" />
+                        </div>
+                        <div class="form-group">
+                            <label for="FormControlInput1">Team Size</label>
+                            <input type="text" class="form-control" id="team-size" />
+                        </div>
+                        <div class="form-group">
+                            <label>Duration</label>
+                            <select class="form-control" id="duration">
+                                <option selected>Choose Duration...</option>
+                                <option value="3mo">3 Months</option>
+                                <option value="5mo">5 Months</option>
+                                <option value="7mo">7 Months</option>
+                                <option value="8mo">8 Months</option>
+                                <option value="11mo">11 Months</option>
+                                <option value="18mo">18 Months</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>SE Led</label><br />
+                            <div class="form-check form-check-inline seled">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="seledTrue" value="true">
+                                <label class="form-check-label" for="inlineRadio1">True</label>
+                            </div>
+                            <div class="form-check form-check-inline seled">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="seledFalse" value="false">
+                                <label class="form-check-label" for="inlineRadio2">False</label>
+                            </div>
+                        </div>
+                        <!-- Technologies Checkboxes -->
+                        <div class="form-group">
+                            <label for="FormControlInput1">Technologies</label><br />
+                            
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="angular" value="angular" />
+                                <label class="form-check-label" for="inlineCheckbox1">Angular</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="bootstrap" value="bootstrap" />
+                                <label class="form-check-label" for="inlineCheckbox2">Bootstrap</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="chart" value="chart" />
+                                <label class="form-check-label" for="inlineCheckbox3">Chart</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="cplusplus" value="cplusplus" />
+                                <label class="form-check-label" for="inlineCheckbox4">C++</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="csharp" value="csharp" />
+                                <label class="form-check-label" for="inlineCheckbox5">C#</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="css" value="css" />
+                                <label class="form-check-label" for="inlineCheckbox6">CSS</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="github" value="github" />
+                                <label class="form-check-label" for="inlineCheckbox7">GitHub</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="handlebars" value="handlebars" />
+                                <label class="form-check-label" for="inlineCheckbox8">Handlebars</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="heroku" value="heroku" />
+                                <label class="form-check-label" for="inlineCheckbox9">Heroku</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="html" value="html" />
+                                <label class="form-check-label" for="inlineCheckbox10">HTML</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="illustrator" value="illustrator" />
+                                <label class="form-check-label" for="inlineCheckbox11">Illustrator</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="java" value="java" />
+                                <label class="form-check-label" for="inlineCheckbox12">Java</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="javascript" value="javascript" />
+                                <label class="form-check-label" for="inlineCheckbox13">JavaScript</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="jquery" value="jquery" />
+                                <label class="form-check-label" for="inlineCheckbox14">JQuery</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="mongodb" value="mongodb" />
+                                <label class="form-check-label" for="inlineCheckbox15">MongoDB</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="mysql" value="mysql" />
+                                <label class="form-check-label" for="inlineCheckbox16">MySQL</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="node" value="node" />
+                                <label class="form-check-label" for="inlineCheckbox17">Node</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="photoshop" value="photoshop" />
+                                <label class="form-check-label" for="inlineCheckbox18">PhotoShop</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="python" value="python" />
+                                <label class="form-check-label" for="inlineCheckbox19">Python</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="react" value="react" />
+                                <label class="form-check-label" for="inlineCheckbox20">React</label>
+                            </div>
+                            <div class="form-check form-check-inline tech">
+                                <input class="form-check-input" type="checkbox" id="sass" value="sass" />
+                                <label class="form-check-label" for="inlineCheckbox21">Sass</label>
+                            </div>
+                        </div>
+                        <!-- End Technologies Checkboxes -->
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Brief Project Description</label>
+                            <textarea class="form-control description" id="brief-description" rows="2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Full Project Description</label>
+                            <textarea class="form-control description" id="full-description" rows="5"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-lg" id="submit-new-project">Submit Project</button>
+                    </form>
+                </div>
+
+<!-- ******************* END POST PROJECT FORM *************************** -->
+<!-- ******************* BEGIN PENDING PROJECTS ************************** -->
+
+                <div class="tab-pane fade" id="pendingProjs" role="tabpanel" aria-labelledby="profile-tab">
+
+                    <!-- All Pending Projs Content in Accordian -->
+                    
+                    <div id="accordion">
+
+                        <!-- Proj 1 -->
+
+                        <div class="card card-proj">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#pendingCollapseOne" aria-expanded="true" aria-controls="pendingCollapseOne">
+                                    Project 1 (ID) - AD Web App
+                                    </button>
+                                </h5>
+                            </div>
+                        
+                            <div id="pendingCollapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    
+                                    <!-- Begin Proj 1 Details -->
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <!-- Details -->
+                                            <h6><span class="projTitle">AD Web App</span></h6>
+                                            <p>
+                                                <em>Budget</em>: $<span class="projBudget">60,000</span><br />
+                                            
+                                                <em>Location</em>: <span class="projLocation">75126</span><br />
+
+                                                <em>Technologies</em>: <span class="projTech">C#, HTML, JavaScript, CSS, JQuery, Angular</span><br />
+
+                                                <em>Start Date</em>: <span class="projStartDate">8/15/2018</span><br />
+                                            
+                                                <em>Duration</em>: <span class="projDuration">4 Months</span><br />
+
+                                                <em>SE Led</em>: <span class="seLed">false</span>
+                                            </p>
+                                            
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <!-- Desc -->
+                                            <p>Client needs clean, dynamic Active Directory personnel resource site. This is an eleven month project and the team will consist of four developers. Client expects developers to have great teamwork and communication skills. Weekly deliverables are expected.</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+
+                                            <!-- Editable -->
+                                            <h6 class="projDetails">Applicants</h6>
+
+                                            <!-- Each Applicant 1 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    David Sipala
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item applicant-move" href="#">Copy to Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Applicant 1 -->
+                                                    
+                                            <!-- Applicant 2 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Doug Henderson
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item applicant-move" href="#">Copy to Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Applicant 2 -->
+                                            <!-- Applicant 3 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Jason Warner
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item applicant-move" href="#">Copy to Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Applicant 3 -->
+                                            <!-- Applicant 4 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Bryan Aber
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item applicant-move" href="#">Copy to Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Applicant 4 -->
+                                            <!-- Applicant 5 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Bill Bradsky
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item applicant-move" href="#">Copy to Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Applicant 5 -->
+
+                                        </div>
+
+                                        <!-- Team Members -->
+
+                                        <div class="col-sm-12" id="team-members">
+                                            <!-- Editable -->
+                                            <h6 class="projDetails">Team Members</h6>
+
+                                            <!-- Each Team Member 1 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Bill Bradsky
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item member-remove" href="#">Remove From Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Team Member 1 -->
+
+                                            <!-- Each Team Member 2 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Doug Henderson
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item member-remove" href="#">Remove From Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Team Member 2 -->
+                                            
+                                        </div>
+
+                                        <!-- End Team Members -->
+
+                                        <!-- Project Stage -->
+                                        <div class="col-sm-12">
+
+                                            <h6 class="projDetails">Project Stage</h6>
+
+                                            <!-- Each Applicant 1 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle proj-state" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Pending
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item pstage" id='Started' href="#">Started</a>
+                                                    <a class="dropdown-item pstage" id='Completed' href="#">Completed</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Applicant 1 -->
+
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <button type="button" class="btn btn-primary" id="update-project">Update Project</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                    <!-- End Proj 1 Details -->
+                            </div>
+                        </div>
+
+                        <!-- End Proj 1 / Beg Proj 2 -->
+
+                        <div class="card card-proj">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pendingCollapseTwo" aria-expanded="false" aria-controls="pendingCollapseTwo">
+                                Project 32 - Company Branding
+                                </button>
+                                </h5>
+                            </div>
+                            <div id="pendingCollapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    Project 32 Details Here
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- End Proj 2 -->
+                        <!-- Proj 3 -->
+                        <div class="card card-proj">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#pendingCollapseThree" aria-expanded="false" aria-controls="pendingCollapseThree">
+                                Project 33 - Company Static Website
+                                </button>
+                                </h5>
+                            </div>
+                            <div id="pendingCollapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                    Project 33 Details Here
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Proj 3 -->
+
+                    <!-- End Accordian -->
+                    </div>
+
+                </div>
+                
+<!-- ******************* END PENDING PROJECTS ************************** -->
+<!-- ******************* BEGIN STARTED PROJECTS ************************ -->
+
+                <div class="tab-pane fade" id="startedProjs" role="tabpanel" aria-labelledby="contact-tab">
+
+                    <!-- Started Projs Content -->
+
+                    <div id="accordion">
+
+                    <!-- Accordian - Started Proj 1 -->
+
+                        <div class="card card-proj">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#startedCollapseOne" aria-expanded="true" aria-controls="startedCollapseOne">
+                                    Project 4 (ID) - Professional ToDo App
+                                    </button>
+                                </h5>
+                            </div>
+                        
+                            <div id="startedCollapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    
+                                    <!-- Begin Started Proj 1 Details -->
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <!-- Details -->
+                                            <h6><span class="projTitle">AD Web App</span></h6>
+                                            <p>
+                                                <em>Budget</em>: $<span class="projBudget">60,000</span><br />
+                                            
+                                                <em>Location</em>: <span class="projLocation">75126</span><br />
+
+                                                <em>Technologies</em>: <span class="projTech">C#, HTML, JavaScript, CSS, JQuery, Angular</span><br />
+
+                                                <em>Start Date</em>: <span class="projStartDate">8/15/2018</span><br />
+                                            
+                                                <em>Duration</em>: <span class="projDuration">4 Months</span><br />
+
+                                                <em>SE Led</em>: <span class="seLed">false</span>
+                                            </p>
+
+                                            
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <!-- Desc -->
+                                            <p>Client needs clean, dynamic Active Directory personnel resource site. This is an eleven month project and the team will consist of four developers. Client expects developers to have great teamwork and communication skills. Weekly deliverables are expected.</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+
+                                            <!-- Editable -->
+                                            <h6 class="projDetails">Applicants</h6>
+
+                                            <!-- Each Applicant 1 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    David Sipala
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item applicant-move" href="#">Copy to Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Applicant 1 -->
+                                                    
+                                            <!-- Applicant 2 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Doug Henderson
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item applicant-move" href="#">Copy to Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Applicant 2 -->
+                                            <!-- Applicant 3 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Jason Warner
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item applicant-move" href="#">Copy to Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Applicant 3 -->
+                                            <!-- Applicant 4 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Bryan Aber
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item applicant-move" href="#">Copy to Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Applicant 4 -->
+                                            <!-- Applicant 5 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Bill Bradsky
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item applicant-move" href="#">Copy to Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Applicant 5 -->
+
+                                        </div>
+
+                                        <!-- Team Members -->
+
+                                        <div class="col-sm-12">
+                                            <!-- Editable -->
+                                            <h6 class="projDetails">Team Members</h6>
+
+                                            <!-- Each Team Member 1 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Bill Bradsky
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item member-remove" href="#">Remove From Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Team Member 1 -->
+
+                                            <!-- Each Team Member 2 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Doug Henderson
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item member-remove" href="#">Remove From Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Team Member 2 -->
+                                            
+                                        </div>
+
+                                        <!-- End Team Members -->
+
+                                        <!-- Project Stage -->
+                                        <div class="col-sm-12">
+
+                                            <h6 class="projDetails">Project Stage</h6>
+
+                                            <!-- Each Applicant 1 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle proj-state" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Pending
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="#">Started</a>
+                                                    <a class="dropdown-item" href="#">Completed</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Applicant 1 -->
+
+
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+
+                            <!-- End Started Proj 1 Details -->
+                            </div>
+                        </div>
+
+                        <div class="card card-proj">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#startedCollapseTwo" aria-expanded="false" aria-controls="startedcollapseTwo">
+                                Project 5 - Auto Market Site
+                                </button>
+                                </h5>
+                            </div>
+                            <div id="startedCollapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    Project 5 Details
+                                </div>
+                            </div>
+                        </div>
+    
+                            <!-- End Proj 2 -->
+
+                    </div>
+                    
+                </div>
+
+<!-- ******************* END STARTED PROJECTS ************************ -->
+<!-- ******************* BEGIN COMPLETED PROJECTS ******************** -->
+
+                <div class="tab-pane fade" id="completedProjs" role="tabpanel" aria-labelledby="contact-tab">
+
+                    <!-- Completed Projs Content -->
+
+                    <div id="accordion">
+
+                        <!-- Accordian - Compl Proj 1 -->
+
+                        <div class="card card-proj">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#completedCollapseOne" aria-expanded="true" aria-controls="completedCollapseOne">
+                                    Project 4 (ID) - Professional ToDo App
+                                    </button>
+                                </h5>
+                            </div>
+                        
+                            <div id="completedCollapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    
+                                    <!-- Begin Compl Proj 1 Details -->
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <!-- Details -->
+                                            <h6><span class="projTitle">AD Web App</span></h6>
+                                            <p>
+                                                <em>Budget</em>: $<span class="projBudget">60,000</span><br />
+                                            
+                                                <em>Location</em>: <span class="projLocation">75126</span><br />
+
+                                                <em>Technologies</em>: <span class="projTech">C#, HTML, JavaScript, CSS, JQuery, Angular</span><br />
+
+                                                <em>Start Date</em>: <span class="projStartDate">8/15/2018</span><br />
+                                            
+                                                <em>Duration</em>: <span class="projDuration">4 Months</span><br />
+
+                                                <em>SE Led</em>: <span class="seLed">false</span>
+                                            </p>
+
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <!-- Desc -->
+                                            <p>Client needs clean, dynamic Active Directory personnel resource site. This is an eleven month project and the team will consist of four developers. Client expects developers to have great teamwork and communication skills. Weekly deliverables are expected.</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+
+                                            <!-- Editable -->
+                                            <h6 class="projDetails">Applicants</h6>
+
+                                            <!-- Each Applicant 1 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    David Sipala
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item applicant-move" href="#">Copy to Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Applicant 1 -->
+                                                    
+                                            <!-- Applicant 2 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Doug Henderson
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item applicant-move" href="#">Copy to Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Applicant 2 -->
+                                            <!-- Applicant 3 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Jason Warner
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item applicant-move" href="#">Copy to Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Applicant 3 -->
+                                            <!-- Applicant 4 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Bryan Aber
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item applicant-move" href="#">Copy to Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Applicant 4 -->
+                                            <!-- Applicant 5 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Bill Bradsky
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item applicant-move" href="#">Copy to Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Applicant 5 -->
+
+                                        </div>
+
+                                        <!-- Team Members -->
+
+                                        <div class="col-sm-12">
+                                            <!-- Editable -->
+                                            <h6 class="projDetails">Team Members</h6>
+
+                                            <!-- Each Team Member 1 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Bill Bradsky
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item member-remove" href="#">Remove From Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Team Member 1 -->
+
+                                            <!-- Each Team Member 2 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Doug Henderson
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item member-remove" href="#">Remove From Team</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Team Member 2 -->
+                                            
+                                        </div>
+
+                                        <!-- End Team Members -->
+
+                                        <!-- Project Stage -->
+                                        <div class="col-sm-12">
+
+                                            <h6 class="projDetails">Project Stage</h6>
+
+                                            <!-- Each Applicant 1 -->
+                                            <span class="dropdown">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle proj-state" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Pending
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="#">Started</a>
+                                                    <a class="dropdown-item" href="#">Completed</a>
+                                                </div>
+                                            </span>
+                                            <!-- End Applicant 1 -->
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <!-- End Compl Proj 1 Details -->
+                            </div>
+                        </div>
+
+                        <div class="card card-proj">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#completedCollapseTwo" aria-expanded="false" aria-controls="completedCollapseTwo">
+                                Project 5 - Auto Market Site
+                                </button>
+                                </h5>
+                            </div>
+                            <div id="completedCollapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    Project 5 Details
+                                </div>
+                            </div>
+                        </div>
+    
+                            <!-- End Proj 2 -->
+
+                    </div>
+                </div>
+
+<!-- ******************* END COMPLETED PROJECTS ******************** -->
+
+            </div>
+
+<!--    ***** END ALL PILLS CONTENT (inludes all content in tabs)****    -->
+
+        </div>
+        <!-- End page container (above) -->
+
+    </section>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- Modal Script -->
+    <script src="./assets/scripts/scripts.js"></script>
+</body>
+
+</html>

@@ -34,37 +34,34 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li>
-                        <div class="post-tab">
-                            &nbsp;
+                        <div class="dropdown icon-tab ">
+                            <button class="btn btn-secondary dropdown-togglen text-nav " type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-user-alt"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Log in</a>
+                                <a class="dropdown-item" href="#">Sign up</a>
+                                <a class="dropdown-item" href="#">My Dashboard</a>
+                            </div>
                         </div>
-                    </li>
-                    <li>
-                        <div class="work-tab">
-                            <a class="nav-link text-nav" href="#">My Dashboard</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="browse-tab">
-                            <a class="nav-link text-nav" href="#">Browse</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="social-tab">
-                            <a class="nav-link text-nav" href="#">Social</a>
-                    </li>
-                    <li>
-                        <div class="icon-tab">
-                            <img src="./assets/images/icons/icon-login.png" class "nav-icon" alt="">
-                        </div>
+
                     </li>
                 </ul>
-                </div>
             </div>
+        </div>
     </nav>
 
+    <!-- Incomplete Profile Warning -->
+    <div class="alert alert-warning profile-incomplete" role="alert">
+        This is a friendly reminder to complete your profile.
+        <a href="./user_profile_form.html" class="alert-link">Click here to get started.</a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
 
-
-    <!-- Section 2 / how it works -->
+    <!-- Dashboard -->
     <section class="dashboard">
         <div class="container">
             <h2 class="text-center text-uppercase text-secondary ">My Dashboard</h2>
@@ -72,48 +69,364 @@
 
             <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="pill" href="#currProjs">Current Projects</a>
+                    <a class="nav-link nav-dashboard active" data-toggle="pill" href="#availProjs">Available Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="pill" href="#applications">My Applications</a>
+                    <a class="nav-link nav-dashboard" data-toggle="pill" href="#currProjs">Current Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="pill" href="#availProjs">Available Projects</a>
+                    <a class="nav-link nav-dashboard" data-toggle="pill" href="#applications">Pending Applications</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="pill" href="#social">Social Events</a>
+                    <a class="nav-link nav-dashboard" data-toggle="pill" href="#social">Social Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-dashboard" data-toggle="pill" href="#profile">My Profile</a>
                 </li>
             </ul>
 
             <div class="tab-content" id="pills-tabContent">
-                <!-- Current Projects -->
-                <div class="tab-pane fade show active" id="currProjs" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-pane fade" id="currProjs" role="tabpanel" aria-labelledby="home-tab">
+
                     <!-- Curr Projs Content -->
+
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+
+                            <div class="card" style="width: 18rem;">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Mobile Weather App</h5>
+                                    <p class="card-text">Two developers needed for a five month project.</p>
+                                    <p class="card-text" id="techNeeded">Python, HTML, JavaScript, Sass, JQuery, React</p>
+                                    <div class="btn btn-primary disabled">In Progress</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- End Curr Projs -->
+
                 </div>
                 <!-- My Applications -->
                 <div class="tab-pane fade" id="applications" role="tabpanel" aria-labelledby="profile-tab">
+
                     <!-- Applications Content -->
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+
+                            <div class="card" style="width: 18rem;">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">AD Web App</h5>
+                                    <p class="card-text">Four developers needed for an eleven month project.</p>
+                                    <p class="card-text" id="techNeeded">C#, HTML, JavaScript, CSS, JQuery, Angular</p>
+                                    <div class="btn btn-primary disabled">Pending</div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+
+
+                            <div class="card" style="width: 18rem;">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Tuition System</h5>
+                                    <p class="card-text">Two developers needed for a five month project.</p>
+                                    <p class="card-text" id="techNeeded">JavaScript, Handlebars, HTML, Bootstrap, CSS, Node, MongoDB</p>
+                                    <div class="btn btn-primary disabled">In Review</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- End Applications Content -->
+
+
                 </div>
                 <!-- Available Projects -->
-                <div class="tab-pane fade" id="availProjs" role="tabpanel" aria-labelledby="contact-tab">
+                <div class="tab-pane fade show active" id="availProjs" role="tabpanel" aria-labelledby="contact-tab">
+
                     <!-- Avail Projs Content -->
+
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+
+                            <div class="card" style="width: 18rem;">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">AD Web App</h5>
+                                    <p class="card-text">Four developers needed for an eleven month project.</p>
+                                    <p class="card-text" id="techNeeded">C#, HTML, JavaScript, CSS, JQuery, Angular</p>
+                                    <a href="#" class="btn btn-primary" data-target="#projectModal" data-toggle="modal" data-desc="Client needs clean, dynamic Active Directory personnel resource site.  This is an eleven month project and the team will consist of four developers. Client expects developers to have great teamwork and communication skills. Weekly deliverables are expected."
+                                        data-team="4" data-time="11mo" data-title="Active Directory Web Application">View Details / Apply</a>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+
+
+                            <div class="card" style="width: 18rem;">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Tuition System</h5>
+                                    <p class="card-text">Two developers needed for a five month project.</p>
+                                    <p class="card-text" id="techNeeded">JavaScript, Handlebars, HTML, Bootstrap, CSS, Node, MongoDB</p>
+                                    <a href="#" class="btn btn-primary" data-target="#projectModal" data-toggle="modal" data-desc="On this project, you'll be working with our Solutions Expert.  Client needs a user-friendly tuition reimbursement system.  This is an five month project and the team will consist of two developers. Weekly deliverables are expected."
+                                        data-team="2" data-time="5mo" data-title="Tuition Reimbursement System">View Details / Apply</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+
+                            <div class="card" style="width: 18rem;">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Website Redesign</h5>
+                                    <p class="card-text">Five developers needed for a seven month project.</p>
+                                    <p class="card-text" id="techNeeded">JavaScript, React, HTML, Bootstrap, Node</p>
+                                    <a href="#" class="btn btn-primary" data-target="#projectModal" data-toggle="modal" data-desc="For this project, five developers will be working with one of our Solutions Experts to redesign the client's current website for mobility.  This project is expected to take seven months.  Need to be able to work well in a team.  Weekly deliverables are expected."
+                                        data-team="5" data-time="7mo" data-title="Website Redesign">View Details / Apply</a>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+
+
+                            <div class="card" style="width: 18rem;">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Company ReBranding</h5>
+                                    <p class="card-text">Two graphic design experts needed for a three month project.</p>
+                                    <p class="card-text" id="techNeeded">Photoshop, Illustrator</p>
+                                    <a href="#" class="btn btn-primary" data-target="#projectModal" data-toggle="modal" data-desc="Client is looking for two graphics design experts for company re-branding. Your team will work directly with the client to discuss culture and history of the company to come up with a clean design.  This project will be three months."
+                                        data-team="2" data-time="3mo" data-title="Company ReBranding">View Details / Apply</a>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+
+
+                            <div class="card" style="width: 18rem;">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Accounting System</h5>
+                                    <p class="card-text">Seven developers needed for an eleven month project.</p>
+                                    <p class="card-text" id="techNeeded">Java, MySQL, CSS, JavaScript, JQuery, Bootstrap</p>
+                                    <a href="#" class="btn btn-primary" data-target="#projectModal" data-toggle="modal" data-desc="For this project, you'll work with seven other developers and a Solutions Expert to overhaul our client's current accounting system.  This project will last eleven months and will require a good amount of collaboration.  Excellent written and oral communication required.  Weekly deliverables will be required."
+                                        data-team="7" data-time="11mo" data-title="Accounting Systems Build">View Details / Apply</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+
+
+                            <div class="card" style="width: 18rem;">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Customer Feedback Site</h5>
+                                    <p class="card-text">Two developers needed for a five month project.</p>
+                                    <p class="card-text" id="techNeeded">Python, MongoDB, Angular, HTML, Bootstrap, Sass</p>
+                                    <a href="#" class="btn btn-primary" data-target="#projectModal" data-toggle="modal" data-desc="Our client is wanting two developers to create a customer feedback site.  This project will take 5 months."
+                                        data-team="2" data-time="5mo" data-title="Customer Feedback Site">View Details / Apply</a>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <!-- End Available Projects -->
+
+
                 </div>
                 <!-- Social Events -->
                 <div class="tab-pane fade" id="social" role="tabpanel" aria-labelledby="contact-tab">
+
+
                     <!-- Social content -->
+
+                    <div class="jumbotron jumbotron-fluid">
+                        <div class="container">
+                            <h1 class="display-4">Code &amp; Coffee</h1>
+                            <p class="lead">Meets every Tuesday at 8am at Toasted. Bring all your nerdy friends!</p>
+                            <p>Toasted
+                                <br /> 5420 Ross Ave #180
+                                <br /> Dallas, TX 75206</p>
+                        </div>
+                    </div>
+
+                    <!-- End Social -->
+
+
+
                 </div>
-            </div>
+
+                <!-- My Profile -->
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="contact-tab">
+
+                    <!-- Begin Profile -->
+
+                    <div class="container">
+                        <img class="img-fluid mb-1 d-block mx-auto img-logo" src="./assets/images/icons/profile-pic.png" alt="">
+                        <!-- <img class="img-fluid mb-1 d-block mx-auto img-logo" src="./assets/images/tech/github-profile.png" alt=""> -->
+                        <h4 class="text-center text-uppercase text-secondary ">John Ramy</h4>
+                        <h5 class="text-center text-secondary ">Front End Developer</h5>
+                    </div>
+
+
+                    <!-- Profile section  -->
+                    <div class="container">
+                        <div class="col-md-12">
+                            <div class=" jumbotron jumbotron-fluid profile-section ">
+                                <div class="container ">
+                                    <h1 class="display-4 ">My Bio</h1>
+                                    <p class="lead ">Originally from Yorkshire, England. I now live in Winter Park, Florida with my lovely
+                                        fiancé and two cats. I’ve worked internationally, in-house and remotely on projects
+                                        for leading brands, agencies, startups and charities. UX and problem solving are
+                                        central to everything I do. I care deeply about creating world-class, useful and
+                                        beautiful products that help people and make a difference. I like to be involved
+                                        at different stages of a digital project, from the seed of the idea, through to sketches,
+                                        design and even the front-end build. As a freelancer, this means I can jump in at
+                                        any stage of a project, or take on the whole project, from design to build.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row ">
+
+
+                        <div class="col-md-6 col-lg-4 ">
+
+                            <div class="card profile-section " style="width: 18rem; ">
+
+                                <div class="card-body ">
+                                    <h5 class="card-title ">Skill Sets</h5>
+                                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's
+                                        content.
+                                    </p>
+                                    <a href="# " class="btn btn-primary ">Edit</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 ">
+
+                            <div class="card profile-section " style="width: 18rem; ">
+
+                                <div class="card-body ">
+                                    <h5 class="card-title ">Experience</h5>
+                                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's
+                                        content.
+                                    </p>
+                                    <a href="# " class="btn btn-primary ">Edit</a>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 ">
+
+                            <div class="card profile-section " style="width: 18rem; ">
+
+                                <div class="card-body ">
+                                    <h5 class="card-title ">Education</h5>
+                                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's
+                                        content.
+                                    </p>
+
+                                    <a href="# " class="btn btn-primary ">Edit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
 
+                    <!-- End Profile -->
 
-        </div>
+                </div>
     </section>
 
 
 
 
+    <!-- Project Modal - Loads Dynamic Content -->
+    <div class="modal fade " id="projectModal " tabindex="-1 " role="dialog " aria-labelledby="projectModal
+                            " aria-hidden="true ">
+        <div class="modal-dialog modal-dialog-centered " role="document ">
 
+            <!-- Header -->
+            <div class="modal-content ">
+                <div class="modal-header ">
+                    <h5 class="modal-title " id="projectTitle ">
+                        <!-- Project Title Here -->
+                    </h5>
+                    <button type="button " class="close " data-dismiss="modal " aria-label="Close ">
+                        <span aria-hidden="true ">&times;</span>
+                    </button>
+                </div>
+
+                <!-- Content -->
+                <div class="modal-body ">
+                    <div class="row ">
+
+                        <!-- Full Description -->
+                        <div class="col ">
+                            <div class="row ">
+                                <h5>Overview</h5>
+                                <p id="description ">
+                                    <!-- Project Description Here -->
+                                </p>
+                            </div>
+                            <div class="row " id="time ">
+                                <!-- Project Time Img Here -->
+                            </div>
+                        </div>
+
+                        <!-- Technology -->
+                        <div class="col " id="tech ">
+                            <h5>Technologies</h5>
+                            <!-- Technologies Load Here (in p tags) -->
+                        </div>
+
+                        <!-- Team Info -->
+                        <div class="col " id="team-info ">
+                            <h5>Team</h5>
+                            <div class="row " id="team-display ">
+                                <!-- Team Here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer ">
+                    <button type="button " class="btn btn-secondary " data-dismiss="modal ">Close</button>
+                    <button type="button " class="btn btn-primary disabled " data-toggle="tooltip " data-placement="top
+                            " id="applyButton " title="Please sign-up/login to Apply ">Apply</button>
+                </div>
+            </div>
+            <!-- End Content -->
+        </div>
+    </div>
+    <!-- End Modal -->
 
 
 
@@ -128,15 +441,15 @@
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN "
+        crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
+        crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
+        crossorigin="anonymous "></script>
 
     <!-- Modal Script -->
-    <script src="./assets/scripts/scripts.js"></script>
+    <script src="./assets/scripts/scripts.js "></script>
 </body>
 
 </html>
