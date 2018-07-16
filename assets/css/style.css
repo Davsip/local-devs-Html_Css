@@ -78,7 +78,7 @@ h6 {
   padding: 0 0 30px 0;
 }
 
-.img-logo  {
+.img-logo {
   padding-top: 60px;
 }
 
@@ -89,7 +89,6 @@ h6 {
 .main-text-2 {
   font-size: 1.7rem;
 }
-
 
 hr.star-light,
 hr.star-dark {
@@ -162,7 +161,8 @@ div.card {
   margin: 10px auto;
 }
 
-a.btn, div.btn {
+a.btn,
+div.btn {
   position: absolute;
   bottom: 20px;
 }
@@ -235,7 +235,6 @@ button.btn-link {
 
 h6.projDetails {
   margin: 40px auto 20px auto;
-
 }
 
 button.btn-link:focus {
@@ -472,10 +471,11 @@ section.dashboard {
   background-color: #128f76;
   border: 0px solid #128f76;
   color: #fff;
-
 }
 
-a:focus, a:hover, a:active {
+a:focus,
+a:hover,
+a:active {
   color: #128f76;
 }
 
@@ -489,4 +489,7 @@ button.btn-secondary {
   border: 1px solid #ff7f50 !important;
 }
 
-
+.profile-section {
+  background-color: #ccc;
+  padding: 1.25rem;
+}
